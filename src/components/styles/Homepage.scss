@@ -1,0 +1,19 @@
+$page-width: 65rem;
+
+.page-header {
+  display: flex;
+  width: $page-width;
+}
+
+.spacer-container {
+  flex-basis: 25%;
+}
+
+.card-row {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: $page-width;
+}

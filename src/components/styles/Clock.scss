@@ -1,0 +1,43 @@
+.clock-container {
+  color: white;
+  font-family: "Inter", serif;
+  position: relative;
+  flex-basis: 50%;
+}
+
+.time {
+  text-align: center;
+  letter-spacing: -0.4rem;
+}
+
+.hours,
+.minutes {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.colon {
+  font-size: 2.25rem;
+  vertical-align: super;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+.seconds {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 15%;
+  margin-left: 6.25rem;
+  filter: opacity(0.25);
+}
+
+.date {
+  text-align: center;
+  font-size: 0.8rem;
+  * {
+    padding-right: 0.25rem;
+  }
+  .week::after{
+    content: ',';
+  }
+}

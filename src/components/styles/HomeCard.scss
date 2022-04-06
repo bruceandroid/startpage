@@ -1,0 +1,124 @@
+$card-height: 7rem;
+$card-width: 12rem;
+$spacing-top: 3.25rem;
+
+$up-time: 0.4s;
+$delay-time: 0.075s;
+
+$btn-name-list: youtube twitch bitwarden plex pihole bazarr radarr sonarr jackett transmission;
+$btn-color-list: #cd201f #6441a5 #175ddc #e5a00d #087908 #cfcfcf #ffc230 #038aab #cfcfcf #930000;
+
+.home-card {
+  background-color: #050d15; //#121213
+  border-radius: 1.25rem;
+  width: $card-width;
+  height: $card-height;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  min-width: $card-width;
+  max-width: $card-width;
+
+  * {
+    transition: opacity 0.15s ease $delay-time, height $up-time ease $delay-time;
+  }
+
+  .icon-card {
+    opacity: 1;
+    height: $card-height;
+    display: flex;
+  }
+  .text-card {
+    opacity: 0;
+    height: 0px;
+    border-radius: 1.25rem;
+    position: relative;
+    span {
+      opacity: 0;
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      right: 0;
+      transition: bottom $up-time ease $delay-time, opacity $up-time ease-in $delay-time;
+    }
+  }
+  &:hover,
+  &:focus {
+    .icon-card {
+      height: 0px;
+      opacity: 0;
+    }
+    .text-card {
+      opacity: 1;
+      width: 100%;
+      height: $card-height;
+      border-bottom-width: 1px;
+      span {
+        opacity: 1;
+        bottom: 35%;
+      }
+    }
+  }
+}
+
+.svg {
+  width: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  filter: saturate(0.75) brightness(0.8);
+  &.youtube {
+    filter: saturate(0.5);
+  }
+  &.twitch {
+    width: 3rem;
+    filter: brightness(0.9);
+  }
+  &.bitwarden {
+    width: 2.5rem;
+    filter: brightness(0.9);
+  }
+  &.plex {
+    width: 1.5rem;
+    filter: brightness(0.9);
+  }
+  &.pihole {
+    width: 2.5rem;
+  }
+  &.radarr {
+    width: 2.75rem;
+  }
+  &.sonarr,
+  &.transmission {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  &.jackett {
+    width: 3rem;
+  }
+}
+
+// to handle all colors
+.home-card {
+  @for $i from 1 through length($btn-name-list) {
+    &.#{nth($btn-name-list, $i)} {
+      box-shadow: #{nth($btn-color-list, $i)} 0rem 0.5rem 0rem 0rem;
+      .text-card {
+        background-color: #{nth($btn-color-list, $i)};
+        border-bottom: solid
+          1px
+          #{nth($btn-color-list, $i)}; // to remove unnecessary black lines in corners
+      }
+    }
+  }
+
+  &.plex,
+  &.bazarr,
+  &.jackett,
+  &.radarr {
+    .text-card {
+      color: black;
+    }
+  }
+}
