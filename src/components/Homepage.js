@@ -8,13 +8,13 @@ import './styles/Homepage.scss';
 const Homepage = () => {
 
   let homeCards = HOMEPAGE_LINKS.map((x, i) =>
-    <HomeCard icon={x.icon} text={x.text} url={x.url} key={i} />
+    <HomeCard data={x} key={i} />
   );
 
   return (
     <>
       <div className="page-header">
-        <div class="spacer-container"/>
+        <div className="spacer-container"/>
         <Clock />
         <Weather />
       </div>

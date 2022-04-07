@@ -43,7 +43,7 @@ $btn-color-list: #cd201f #6441a5 #175ddc #e5a00d #087908 #cfcfcf #ffc230 #038aab
     }
   }
   &:hover,
-  &:focus {
+  &:focus-visible {
     .icon-card {
       height: 0px;
       opacity: 0;
@@ -96,6 +96,18 @@ $btn-color-list: #cd201f #6441a5 #175ddc #e5a00d #087908 #cfcfcf #ffc230 #038aab
   }
   &.jackett {
     width: 3rem;
+  }
+}
+
+.extra {
+  width: 1.5rem;
+  opacity: 0;
+  z-index: 10000;
+  position: relative;
+  bottom: 1.5rem;
+  left: -5.2rem;
+  &:hover {
+    opacity: 1;
   }
 }
 

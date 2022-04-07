@@ -5,52 +5,62 @@ const HOMEPAGE_LINKS = [
   {
     icon: 'youtube',
     text: 'YouTube',
-    url: "https://www.youtube.com/"
+    url: "https://www.youtube.com/",
+    secret: false,
   },
   {
     icon: 'twitch',
     text: 'Twitch',
-    url: "https://www.twitch.tv/"
+    url: "https://www.twitch.tv/",
+    secret: false,
   },
   {
     icon: 'bitwarden',
     text: 'Bitwarden',
-    url: "https://vault.bandrade.pt/"
+    url: "https://vault.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'plex',
     text: 'Plex',
-    url: "https://app.plex.tv/"
+    url: "https://app.plex.tv/",
+    secret: false,
   },
   {
     icon: 'pihole',
     text: 'Pi-hole',
-    url: "http://pihole.bandrade.pt/"
+    url: "http://pihole.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'bazarr',
     text: 'Bazarr',
-    url: "https://bazarr.bandrade.pt/"
+    url: "https://bazarr.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'radarr',
     text: 'Radarr',
-    url: "https://radarr.bandrade.pt/"
+    url: "https://radarr.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'sonarr',
     text: 'Sonarr',
-    url: "https://sonarr.bandrade.pt/"
+    url: "https://sonarr.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'jackett',
     text: 'Jackett',
-    url: "https://jackett.bandrade.pt/"
+    url: "https://jackett.bandrade.pt/",
+    secret: true,
   },
   {
     icon: 'transmission',
     text: 'Transmission',
-    url: "https://transmission.bandrade.pt/"
+    url: "https://transmission.bandrade.pt/",
+    secret: true,
   },
 ]
 
