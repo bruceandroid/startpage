@@ -3,6 +3,7 @@ $page-width: 65rem;
 .page-header {
   display: flex;
   width: $page-width;
+  max-width: 100%;
 }
 
 .spacer-container {
@@ -16,4 +17,5 @@ $page-width: 65rem;
   flex-flow: row wrap;
   justify-content: center;
   max-width: $page-width;
+  padding-bottom: 5rem;
 }

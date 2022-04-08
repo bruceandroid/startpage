@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Clock from "./Clock";
 import Weather from "./Weather";
 import HomeCard from "./HomeCard";
@@ -11,12 +11,25 @@ const Homepage = () => {
     <HomeCard data={x} key={i} />
   );
 
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakPoint = 1040;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <>
       <div className="page-header">
-        <div className="spacer-container"/>
+        <div className="spacer-container" />
+
         <Clock />
-        <Weather />
+
+        {width >= breakPoint ?
+          <Weather /> :
+          <div className="spacer-container" />}
       </div>
       <div className="card-row">
         {homeCards}
