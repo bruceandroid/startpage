@@ -4,6 +4,7 @@ $page-width: 65rem;
   display: flex;
   width: $page-width;
   max-width: 100%;
+  margin-top: 5rem;
 }
 
 .spacer-container {
@@ -11,11 +12,19 @@ $page-width: 65rem;
 }
 
 .card-row {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-flow: row wrap;
   justify-content: center;
-  max-width: $page-width;
-  padding-bottom: 5rem;
+  width: $page-width;
+  max-width: 100%;
+
+  &.search {
+    gap: 0;
+  }
+
+  &.last {
+    padding-bottom: 5rem;
+  }
 }

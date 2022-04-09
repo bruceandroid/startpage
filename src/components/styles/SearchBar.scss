@@ -1,0 +1,57 @@
+$active-item: #041c04;
+
+.search-container {
+  width: 100%;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 63.85rem;
+  background-color: #00000099;
+  height: 2.5rem;
+  border: solid 1px #191919;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  color: white;
+  &.list-on {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 2.6rem;
+  left: 0;
+
+  width: 100%;
+  max-width: 64.95rem;
+  max-height: 17rem;
+  overflow-y: auto;
+
+  padding: 0.5rem 0;
+  margin: 0;
+  border: solid 1px #191919;
+  border-top: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: #000000;
+  z-index: 100;
+
+  li {
+    list-style-type: none;
+    text-align: left;
+    padding: 0.25rem 0 0.4rem 1rem;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+      background-color: $active-item;
+    }
+  }
+  .suggestion-active {
+    background-color: $active-item;
+  }
+}

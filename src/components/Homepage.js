@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Clock from "./Clock";
 import Weather from "./Weather";
 import HomeCard from "./HomeCard";
+import SearchBar from "./SearchBar";
 import { HOMEPAGE_LINKS } from "../util/constants";
 import './styles/Homepage.scss';
 
@@ -31,7 +32,10 @@ const Homepage = () => {
           <Weather /> :
           <div className="spacer-container" />}
       </div>
-      <div className="card-row">
+      <div className="card-row search">
+        <SearchBar />
+      </div>
+      <div className="card-row last">
         {homeCards}
       </div>
     </>

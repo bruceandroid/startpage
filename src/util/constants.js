@@ -189,10 +189,27 @@ const WEATHER = {
   }
 }
 
+const IMPORTANT_URLS = [
+  'https://www.youtube.com/',
+  'https://www.youtube.com/c/xQcOW',
+  'https://www.facebook.com/',
+  'https://twitter.com/',
+  'https://www.reddit.com/',
+  'https://www.twitch.tv/',
+  'https://www.twitch.tv/xqcow',
+  'https://www.chess.com/home',
+  'https://drive.google.com/drive/',
+  'https://gmail.com/',
+  'https://www.nicehash.com/my/dashboard',
+  'https://calendar.google.com/',
+  'https://web.whatsapp.com',
+]
+
 export {
   FORM_TYPE,
   HOMEPAGE_LINKS,
   WEEKDAYS,
   MONTHS,
-  WEATHER
+  WEATHER,
+  IMPORTANT_URLS
 }
