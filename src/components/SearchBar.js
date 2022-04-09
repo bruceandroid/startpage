@@ -8,7 +8,6 @@ const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
 
   const onChange = (e) => {
-    console.log('>>>', e.target.value, e.key);
     let userInput = e.target.value;
 
     // Filter our suggestions that don't contain the user's input
