@@ -32,9 +32,11 @@ const Homepage = () => {
           <Weather /> :
           <div className="spacer-container" />}
       </div>
-      <div className="card-row search">
-        <SearchBar />
-      </div>
+      {width >= breakPoint &&
+        <div className="card-row search">
+          <SearchBar />
+        </div>
+      }
       <div className="card-row last">
         {homeCards}
       </div>
