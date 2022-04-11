@@ -10,7 +10,6 @@ function addInitialZero(time) {
 }
 
 function getAllChildren(htmlElement) {
-  console.log(htmlElement, htmlElement.children.length);
   if (htmlElement.children.length === 0) return [htmlElement];
   let allChildElements = [];
 

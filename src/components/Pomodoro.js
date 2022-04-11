@@ -12,7 +12,6 @@ const Pomodoro = () => {
   const POSSIBLE_TIMES = [5, 15, 25];
 
   const startCountdown = (time) => (e) => {
-    console.log(previous, active);
     setActive({ time, current: true });
     if (previous.time !== time) {
       setRepeat(0);
