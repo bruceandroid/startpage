@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Pomodoro from "./Pomodoro";
 import Clock from "./Clock";
 import Weather from "./Weather";
 import HomeCard from "./HomeCard";
@@ -24,13 +25,17 @@ const Homepage = () => {
   return (
     <>
       <div className="page-header">
-        <div className="spacer-container" />
+        {width >= breakPoint ?
+          <Pomodoro /> :
+          <div className="spacer-container" />
+        }
 
         <Clock />
 
         {width >= breakPoint ?
           <Weather /> :
-          <div className="spacer-container" />}
+          <div className="spacer-container" />
+        }
       </div>
       {width >= breakPoint &&
         <div className="card-row search">

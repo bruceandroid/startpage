@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { WEEKDAYS, MONTHS } from "../util/constants";
+import { addInitialZero } from "../util/util";
 import './styles/Clock.scss';
 
 const Clock = () => {
   let now = new Date();
-
-  const addInitialZero = (time) => {
-    if (time < 10) {
-      time = '0' + time;
-    }
-    return time;
-  }
 
   let [hours, setHours] = useState(addInitialZero(now.getHours()));
   let [minutes, setMinutes] = useState(addInitialZero(now.getMinutes()));
