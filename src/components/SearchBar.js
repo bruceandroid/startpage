@@ -52,7 +52,7 @@ const SearchBar = () => {
   }
 
   const Autocomplete = () => {
-    return filteredSuggestions.length && (
+    return filteredSuggestions.length ? (
       <ul className="suggestion-list">
         {filteredSuggestions.map((suggestion, index) => {
           let className;
@@ -61,16 +61,17 @@ const SearchBar = () => {
             className = "suggestion-active";
           }
           return (
-            <li className={className} key={suggestion} tabIndex="0"
+            <li className={className} key={index} tabIndex="0"
               onClick={submitUrl(suggestion)} onKeyUp={changeInputValue(suggestion)}>
               {suggestion}
             </li>
           );
         })}
       </ul>
-    );
+    ) : null;
   };
 
+  /*
   // const handleArrowKeys = useCallback((e) => {
   //   console.log(e);
   //   console.log(lineIndex);
@@ -115,7 +116,7 @@ const SearchBar = () => {
   //     lineList.children[lineIndex].focus();
   //   }
   // }, [lineIndex]);
-
+ */
 
   return (
     <>
@@ -124,7 +125,8 @@ const SearchBar = () => {
           className={"search-bar" + (filteredSuggestions.length > 0 ? ' list-on' : '')}
           onChange={onChange} onKeyUp={submitUrl()} />
         {inputValue.length > 0 &&
-          <Autocomplete />}
+          <Autocomplete />
+        }
       </div>
     </>
   )
